@@ -1,1 +1,79 @@
-site_name: My Docs
+site_name: Nodal Notebook
+site_url: https://dabonzo.github.io/nodal_notebook/
+
+
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      # accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - search.suggest
+    - navigation.sections
+    - navigation.top
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+
+plugins:
+  - social
+  - search
+
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github-alt
+#       link: https://github.com/james-willett
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/TheJamesWillett
+#     - icon: fontawesome/brands/linkedin
+#       link: https://www.linkedin.com/in/willettjames/
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: |
+  &copy; 2023 <a href="https://dabonzo.github.io/nodal_notebook/"  target="_blank" rel="noopener">Dani Speh</a>
+
+nav:
+  - Home: index.md
+  - CTF Walkthrougs: ctf_walkthroughs.md
+  - Sysadmin Chronicles: sysadmin_chronicles.md
+  - Cybersecurity Arsenal: cybersecurity_arsenal.md
+  - Technical Advice:
+    - Virtualization:
+        - 'Auto-Adjusting Screen Resolutions in Virtual Machines': technical_advice/auto-adjusting-screen-resolutions-kvm-qemu-udev-spice.md
+        # - 'Auto-Adjusting Screen Resolutions in Virtual Machines': technical_advice/adjusting-screen-resolutions-virtual-machines-udev-spice.md
+  - Resources: resources.md
+  - About Me: about_me.md
